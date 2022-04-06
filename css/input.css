@@ -1,0 +1,52 @@
+
+#form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    /* margin: auto; */
+}
+
+#inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    /* margin:auto; */
+}
+
+.character {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    /* margin: auto; */
+}
+
+/* #vs {
+    margin: auto;
+} */
+
+#date, #opponent, #matches, #char-dropdown-1, #char-dropdown-2 {
+    background-color: var(--bg-gray-2);
+    color: var(--text-white);
+    /* margin: auto; */
+}
+
+.labeled {
+    margin: auto;
+}
+
+#matches {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#submit-button {
+    width: 8rem;
+    margin: auto;
+    background-color: var(--ggstRed1);
+    color: var(--text-white);
+}

@@ -1,4 +1,27 @@
 
+:root {
+    /* font */
+    font-size: 16px;
+    font-family: 'Open Sans';
+
+    /* colors */
+    --bg-gray-1: #141414;
+    --bg-gray-2: #202020;
+    --bg-gray-3: #272727;
+    --text-white: #cdcdcd;
+    --ggstRed1: #770c00;
+    --ggstRed2: #a01000;
+    --ggstRed3: #f13932;
+
+    /* numbers */
+    --transition-speed: 600ms;
+    --nav-width-small: 5rem;
+    --nav-width-large: 16rem;
+    --nav-icon-width: 2rem;
+    --nav-icon-margin-lr: calc((var(--nav-width-small) - var(--nav-icon-width))/2);
+    --nav-logo-margin-left: calc(var(--nav-width-large) - var(--nav-icon-width) - var(--nav-icon-margin-lr));
+}
+
 body {
     color: var(--text-white);
     background-color: var(--bg-gray-3);
