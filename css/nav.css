@@ -14,6 +14,11 @@
     --nav-icon-width: 2rem;
     --nav-icon-margin-lr: calc((var(--nav-width-small) - var(--nav-icon-width))/2);
     --nav-logo-margin-left: calc(var(--nav-width-large) - var(--nav-icon-width) - var(--nav-icon-margin-lr));
+
+    --nav-width: 100vw;
+    --nav-height: var(--nav-width-small);
+    --nav-width-occupation: 0;
+    --nav-height-occupation: var(--nav-width-small);
 }
 
 .navbar {
@@ -23,8 +28,8 @@
     transition: width var(--nav-transition-speed) ease;
     overflow: auto;
     top: 0;
-    width: 100vw;
-    height: var(--nav-width-small);
+    width: var(--nav-width);
+    height: var(--nav-height);
 }
 
 .navbar-nav {
@@ -124,10 +129,11 @@ main {
 
 /* Large screens */
 @media only screen and (min-width: 600px) {
-    .navbar {
-        top: 0;
-        width: var(--nav-width-small);
-        height: 100vh;
+    :root {
+        --nav-width: var(--nav-width-small);
+        --nav-height: 100vh;
+        --nav-width-occupation: var(--nav-width-small);
+        --nav-height-occupation: 0;
     }
 
     .logo {
