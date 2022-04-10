@@ -12,14 +12,6 @@
     --ggstRed1: #770c00;
     --ggstRed2: #a01000;
     --ggstRed3: #f13932;
-
-    /* numbers */
-    --transition-speed: 600ms;
-    --nav-width-small: 5rem;
-    --nav-width-large: 16rem;
-    --nav-icon-width: 2rem;
-    --nav-icon-margin-lr: calc((var(--nav-width-small) - var(--nav-icon-width))/2);
-    --nav-logo-margin-left: calc(var(--nav-width-large) - var(--nav-icon-width) - var(--nav-icon-margin-lr));
 }
 
 body {
@@ -42,6 +34,5 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-    margin-left: 5rem;
     padding: 1rem;
 }
