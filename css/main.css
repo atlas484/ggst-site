@@ -34,5 +34,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-    padding: 1rem;
+    --main-padding: 1rem:
+    padding: var(--main-padding);
 }
