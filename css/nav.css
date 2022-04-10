@@ -17,7 +17,7 @@
 
     --nav-width: 100vw;
     --nav-height: var(--nav-width-small);
-    --nav-width-occupation: 0;
+    --nav-width-occupation: 0px;
     --nav-height-occupation: var(--nav-width-small);
 }
 
