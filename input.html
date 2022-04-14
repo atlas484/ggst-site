@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/input.css">
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
     rel="stylesheet"
@@ -91,6 +92,66 @@
 
 <!-- Page Content -->
 <main>
+  <h1>Input Matches</h1>
+  <p id="last-match">The last match was: </p>
+
+  <form id="form" autocomplete="off" onsubmit="processForm()">
+    <div id="inputs">
+      <div class="character" id="character-1">
+        <div class="labeled">
+          <label for="date">Date: </label>
+          <input type="date" id="date" name="date" required="required">
+        </div>
+        <img src="#" alt="Character 1 img", width="360" height="360"/>
+        <select name="character-1" id="char-dropdown-1">
+          <option value="SO">Sol Badguy</option>
+          <option value="KY">Ky Kiske</option>
+          <option value="GI" selected>Giovanna</option>
+          <option value="MI">Millia</option>
+          <option value="NA">Nagoriyuki</option>
+        </select>
+      </div>
+
+      <p id="vs">VS</p>
+
+      <div class="character" id="character-2">
+        <div class="labeled">
+          <label for="opponent">Opponent: </label>
+          <select name="opponent" id="opponent">
+            <option value="Raghav">Raghav</option>
+            <option value="Kyle">Kyle</option>
+            <option value="Yonas">Yonas</option>
+            <option value="#C">Celestial</option>
+            <option value="*R">Random</option>
+            <option value="*T">Tournament</option>
+            <option value="#10">Floor 10</option>
+            <option value="#9">Floor 9</option>
+            <option value="#8">Floor 8</option>
+            <option value="#7">Floor 7</option>
+            <option value="#6">Floor 6</option>
+            <option value="#5">Floor 5</option>
+            <option value="#4">Floor 4</option>
+            <option value="#3">Floor 3</option>
+            <option value="#2">Floor 2</option>
+            <option value="#1">Floor 1</option>            
+          </select>
+        </div>
+        <img src="#" alt="Character 2 img", width="360" height="360"/>
+        <select name="character-2" id="char-dropdown-2">
+          <option value="SO">Sol Badguy</option>
+          <option value="KY">Ky Kiske</option>
+          <option value="GI">Giovanna</option>
+          <option value="MI" selected>Millia</option>
+          <option value="NA">Nagoriyuki</option>
+        </select>
+      </div>
+    </div>
+    <textarea 
+      id="matches" name="matches" rows="4" required="required"
+      placeholder="Input matches here&#10;1 = 2-0&#10;2 = 2-1&#10;3 = 1-2&#10;4 = 0-2"></textarea>
+    <input type="submit" value="Submit" id="submit-button">
+  </form>
+
 
 </main>
 
