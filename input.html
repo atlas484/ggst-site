@@ -10,6 +10,7 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
     rel="stylesheet"
   />
+  <script src="/javascript/input.js"></script>
 </head>
 
 <body>
@@ -95,7 +96,7 @@
   <h1>Input Matches</h1>
   <p id="last-match">The last match was: </p>
 
-  <form id="form" autocomplete="off" onsubmit="processForm()">
+  <form id="form" autocomplete="off" onsubmit="return processForm()">
     <div id="inputs">
       <div class="character" id="character-1">
         <div class="labeled">
