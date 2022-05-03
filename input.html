@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
     rel="stylesheet"
   />
-  <script src="/javascript/input.js"></script>
+  <script src="javascript/input.js"></script>
 </head>
 
 <body>
@@ -104,8 +104,8 @@
           <label for="date">Date: </label>
           <input type="date" id="date" name="date" required="required">
         </div>
-        <img src="#" alt="Character 1 img", width="360" height="360"/>
-        <select name="character-1" id="char-dropdown-1">
+        <img src="characters/faces/SO.png" id="character-1-img" alt="Character 1 img", width="360" height="360"/>
+        <select name="character-1" id="char-dropdown-1" onchange="setCharacterImage(1)">
           <option value="SO">Sol Badguy</option>
           <option value="KY">Ky Kiske</option>
           <option value="GI" selected>Giovanna</option>
@@ -138,8 +138,8 @@
             <option value="#1">Floor 1</option>            
           </select>
         </div>
-        <img src="#" alt="Character 2 img", width="360" height="360"/>
-        <select name="character-2" id="char-dropdown-2">
+        <img src="characters/faces/KY.png" id="character-2-img" alt="Character 2 img", width="360" height="360"/>
+        <select name="character-2" id="char-dropdown-2" onchange="setCharacterImage(2)">
           <option value="SO">Sol Badguy</option>
           <option value="KY">Ky Kiske</option>
           <option value="GI">Giovanna</option>

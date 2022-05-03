@@ -1,14 +1,19 @@
 
 function setDate(){
+    console.log("setting the date")
     document.getElementById('date').valueAsDate = new Date();
 }
 
 function fillCharacters(){
-
+    console.log("filling character lists")
 }
 
 function setCharacterImage(num) {
-    
+    // console.log(`settting character ${num} image`);
+    dropdown = document.getElementById(`char-dropdown-${num}`);
+    characterCode = dropdown.value;
+    img = document.getElementById(`character-${num}-img`);
+    img.src = `characters/faces/${characterCode}.png`;
 }
 
 
