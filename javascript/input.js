@@ -1,10 +1,10 @@
 
-function setDate(){
+function setDate() {
     console.log("setting the date")
     document.getElementById('date').valueAsDate = new Date((new Date()).toLocaleDateString());
 }
 
-function fillCharacters(){
+function fillCharacters() {
     console.log("filling character lists")
     fetch("./characters/codes.json")
         .then(response => response.json())
@@ -20,6 +20,20 @@ function fillCharacters(){
             select1.innerHTML = select.innerHTML
             var select2 = document.getElementById("char-dropdown-2");
             select2.innerHTML = select.innerHTML
+        });
+}
+
+function setDefaults() {
+    console.log("setting character defaults")
+    fetch("./characters/defaults.json")
+        .then(response => response.json())
+        .then(jsondata => {
+            var character1 = document.getElementById("char-dropdown-1");
+            character1.value = jsondata["me"]
+            var opponent = document.getElementById("opponent");
+            opponent.value = jsondata["opponent"]["name"]
+            var character2 = document.getElementById("char-dropdown-2");
+            character2.value = jsondata["opponent"]["character"]
         });
 }
 
@@ -55,6 +69,7 @@ function processForm() {
 window.addEventListener("load", function() {
     setDate();
     fillCharacters();
+    setDefaults();
     setCharacterImage(1);
     setCharacterImage(2);
 });
