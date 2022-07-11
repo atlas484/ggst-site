@@ -1,11 +1,26 @@
 
 function setDate(){
     console.log("setting the date")
-    document.getElementById('date').valueAsDate = new Date();
+    document.getElementById('date').valueAsDate = new Date((new Date()).toLocaleDateString());
 }
 
 function fillCharacters(){
     console.log("filling character lists")
+    fetch("./characters/codes.json")
+        .then(response => response.json())
+        .then(jsondata => {
+            var select = document.createElement("select");
+            for(const key in jsondata) {
+                var option = document.createElement("option");
+                option.value = key;
+                option.text = jsondata[key]["name_long"];
+                select.add(option);
+            }
+            var select1 = document.getElementById("char-dropdown-1");
+            select1.innerHTML = select.innerHTML
+            var select2 = document.getElementById("char-dropdown-2");
+            select2.innerHTML = select.innerHTML
+        });
 }
 
 function setCharacterImage(num) {
