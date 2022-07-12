@@ -6,7 +6,7 @@ function setDate() {
 
 function fillCharacters() {
     // console.log("filling character lists")
-    fetch("./characters/codes.json")
+    fetch("./characters/codes.json", {cache: "no-cache"})
         .then(response => response.json())
         .then(jsondata => {
             var select = document.createElement("select");
@@ -25,7 +25,7 @@ function fillCharacters() {
 
 function setDefaults() {
     // console.log("setting character defaults")
-    fetch("./characters/defaults.json")
+    fetch("./characters/defaults.json", {cache: "no-cache"})
         .then(response => response.json())
         .then(jsondata => {
             var character1 = document.getElementById("char-dropdown-1");
