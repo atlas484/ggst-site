@@ -1,11 +1,11 @@
 
 function setDate() {
-    console.log("setting the date")
+    // console.log("setting the date")
     document.getElementById('date').valueAsDate = new Date((new Date()).toLocaleDateString());
 }
 
 function fillCharacters() {
-    console.log("filling character lists")
+    // console.log("filling character lists")
     fetch("./characters/codes.json")
         .then(response => response.json())
         .then(jsondata => {
@@ -24,7 +24,7 @@ function fillCharacters() {
 }
 
 function setDefaults() {
-    console.log("setting character defaults")
+    // console.log("setting character defaults")
     fetch("./characters/defaults.json")
         .then(response => response.json())
         .then(jsondata => {
@@ -34,11 +34,15 @@ function setDefaults() {
             opponent.value = jsondata["opponent"]["name"]
             var character2 = document.getElementById("char-dropdown-2");
             character2.value = jsondata["opponent"]["character"]
+        })
+        .then(() => {
+            setCharacterImage(1);
+            setCharacterImage(2);
         });
 }
 
 function setCharacterImage(num) {
-    // console.log(`settting character ${num} image`);
+    // console.log(`setting character ${num} image`);
     dropdown = document.getElementById(`char-dropdown-${num}`);
     characterCode = dropdown.value;
     img = document.getElementById(`character-${num}-img`);
@@ -53,7 +57,7 @@ function processForm() {
 
     // (B) AJAX SEND FORM
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "0-dummy.html");
+    xhr.open("POST", "processing/input.php");
     xhr.onload = function () {
         console.log(data);
         console.log(this.response);
@@ -66,10 +70,18 @@ function processForm() {
     return false;
 }
 
+function checkPageValues() {
+    console.log(`Date: ${document.getElementById('date').valueAsDate}`);
+    console.log(`Opponent: ${document.getElementById("opponent").value}`);
+    console.log(`Character 1: ${document.getElementById('char-dropdown-1').value}`);
+    console.log(`Character 2: ${document.getElementById('char-dropdown-2').value}`);
+}
+
 window.addEventListener("load", function() {
     setDate();
     fillCharacters();
     setDefaults();
     setCharacterImage(1);
     setCharacterImage(2);
+    // checkPageValues();
 });
