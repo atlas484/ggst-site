@@ -59,7 +59,7 @@ function processForm() {
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "php/input.php");
     xhr.onload = function () {
-        console.log(data);
+        // console.log(data);
         console.log(this.response);
         // MANUAL RESET
         document.getElementById("games").value = "";
