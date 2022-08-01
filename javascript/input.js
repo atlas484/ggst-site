@@ -57,12 +57,12 @@ function processForm() {
 
     // (B) AJAX SEND FORM
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "processing/input.php");
+    xhr.open("POST", "php/input.php");
     xhr.onload = function () {
         console.log(data);
         console.log(this.response);
         // MANUAL RESET
-        document.getElementById("matches").value = "";
+        document.getElementById("games").value = "";
     };
     xhr.send(data);
 

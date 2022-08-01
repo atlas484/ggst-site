@@ -51,7 +51,7 @@ main {
     margin: var(--VS-margin);
 }
 
-#date, #opponent, #matches, #char-dropdown-1, #char-dropdown-2 {
+#date, #opponent, #games, #char-dropdown-1, #char-dropdown-2 {
     background-color: var(--bg-gray-2);
     color: var(--text-white);
     /* margin: auto; */
@@ -61,7 +61,7 @@ main {
     margin: auto;
 }
 
-#matches {
+#games {
     margin-top: 1rem;
     box-sizing: border-box;
     width: 100%;
