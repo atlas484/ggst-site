@@ -63,6 +63,7 @@ function processForm() {
         console.log(this.response);
         // MANUAL RESET
         document.getElementById("games").value = "";
+        getLastSet();
     };
     xhr.send(data);
 
@@ -77,11 +78,38 @@ function checkPageValues() {
     console.log(`Character 2: ${document.getElementById('char-dropdown-2').value}`);
 }
 
+function getLastSet() {
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "php/last_set.php");
+    xhr.onload = function () {
+        const response = JSON.parse(this.response);
+        // console.log(this.response);
+        if (response["successful"]){
+            let last_set_p = document.getElementById("last-set");
+            const date = response["date"];
+            const opp = response["opponent"];
+            const c1 = response["character_1"];
+            const c2 = response["character_2"];
+            const ws = parseInt(response["won"]);
+            const ls = parseInt(response["played"]) - ws;
+
+            let oppStr = "";
+            if (opp[0] == "*") oppStr = opp[1] == "T" ? " in tournament" : "";
+            else if (opp[0] == "#") oppStr = " in ranked";
+            else oppStr = ` against ${opp}`;
+            
+            last_set_p.innerHTML = `The last set was on ${date}${oppStr}, ${c1} vs ${c2}, ${ws}-${ls}`;
+        }
+    };
+    xhr.send();
+}
+
 window.addEventListener("load", function() {
     setDate();
     fillCharacters();
     setDefaults();
     setCharacterImage(1);
     setCharacterImage(2);
+    getLastSet();
     // checkPageValues();
 });
