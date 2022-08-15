@@ -94,7 +94,9 @@ function getLastSet() {
             const ls = parseInt(response["played"]) - ws;
 
             let oppStr = "";
-            if (opp[0] == "*") oppStr = opp[1] == "T" ? " in tournament" : "";
+            if (opp[0] == "*") {
+                if (opp == "*Tournament") " in tournament";
+            }
             else if (opp[0] == "#") oppStr = " in ranked";
             else oppStr = ` against ${opp}`;
             
