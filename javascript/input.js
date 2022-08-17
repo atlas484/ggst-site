@@ -83,9 +83,9 @@ function getLastSet() {
     xhr.open("GET", "php/last_set.php");
     xhr.onload = function () {
         const response = JSON.parse(this.response);
+        let last_set_p = document.getElementById("last-set");
         // console.log(this.response);
         if (response["successful"]){
-            let last_set_p = document.getElementById("last-set");
             const date = response["date"];
             const opp = response["opponent"];
             const c1 = response["character_1"];
@@ -93,15 +93,15 @@ function getLastSet() {
             const ws = parseInt(response["won"]);
             const ls = parseInt(response["played"]) - ws;
 
-            let oppStr = "";
-            if (opp[0] == "*") {
-                if (opp == "*Tournament") " in tournament";
-            }
-            else if (opp[0] == "#") oppStr = " in ranked";
+            let oppStr;
+            if (opp == "Ranked") oppStr = " in ranked";
+            else if (opp == "Tournament") oppStr = " in tournament";
+            else if (opp == "Random") oppStr = " against a random opponent";
             else oppStr = ` against ${opp}`;
             
             last_set_p.innerHTML = `The last set was on ${date}${oppStr}, ${c1} vs ${c2}, ${ws}-${ls}`;
         }
+        else last_set_p.innerHTML = "Failed to retrieve data on the last set played";
     };
     xhr.send();
 }
