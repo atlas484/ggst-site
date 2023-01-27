@@ -124,5 +124,11 @@
 		"name-short": "Bridget",
 		"name_long":  "Bridget",
 		"name-other": ["bridget", "bridge", "briget", "birdget", "br"]
+	},
+	"SI": {
+		"number": 21,
+		"name-short": "Sin",
+		"name_long":  "Sin Kiske",
+		"name-other": ["sin", "sinkiske", "sin_kiske", "sink", "si"]
 	}
 }
