@@ -1,0 +1,128 @@
+{
+	"SO": {
+		"number": 0,
+		"name-short": "Sol",
+		"name_long":  "Sol Badguy",
+		"name-other":  ["sol", "solbadguy", "sol_badguy", "so"]
+	},
+	"KY": {
+		"number": 1,
+		"name-short": "Ky",
+		"name_long":  "Ky Kiske",
+		"name-other": ["ky", "kykiske", "ky_kiske", "kyle", "kylekiske", "kyle_kiske"]
+	},
+	"MA": {
+		"number": 2,
+		"name-short": "May",
+		"name_long":  "May",
+		"name-other": ["may", "ma"]
+	},
+	"AX": {
+		"number": 3,
+		"name-short": "Axl",
+		"name_long":  "Axl Low",
+		"name-other": ["axl", "axllow", "axl_low", "ax"]
+	},
+	"CH": {
+		"number": 4,
+		"name-short": "Chipp",
+		"name_long":  "Chipp Zanuff",
+		"name-other": ["chipp", "chip", "chippzanuff", "chipp_zanuff", "ch"]
+	},
+	"PO": {
+		"number": 5,
+		"name-short": "Potemkin",
+		"name_long":  "Potemkin",
+		"name-other": ["pot", "potem", "potemkin", "po"]
+	},
+	"FA": {
+		"number": 6,
+		"name-short": "Faust",
+		"name_long":  "Faust",
+		"name-other": ["faust", "fa"]
+	},
+	"MI": {
+		"number": 7,
+		"name-short": "Millia",
+		"name_long":  "Millia Rage",
+		"name-other": ["millia", "milia", "milliarage", "millia_rage", "mi"]
+	},
+	"ZA": {
+		"number": 8,
+		"name-short": "Zato",
+		"name_long":  "Zato=1",
+		"name-other": ["zato", "zato=1", "zato1", "zato_1", "za"]
+	},
+	"RA": {
+		"number": 9,
+		"name-short": "Ramlethal",
+		"name_long":  "Ramlethal Valentine",
+		"name-other": ["ram", "ramlethal", "ramvalentine", "ramlethalvalentine", "ram_valentine", "ramlethal_valentine", "ra"]
+	},
+	"LE": {
+		"number": 10,
+		"name-short": "Leo",
+		"name_long":  "Leo Whitefang",
+		"name-other": ["leo", "leowhitefang", "leo_whitefang", "leowhite", "leo_white", "le"]
+	},
+	"NA": {
+		"number": 11,
+		"name-short": "Nagoriyuki",
+		"name_long":  "Nagoriyuki",
+		"name-other": ["nago", "nagoriyuki", "yuki", "na"]
+	},
+	"GI": {
+		"number": 12,
+		"name-short": "Giovanna",
+		"name_long":  "Giovanna",
+		"name-other": ["gio", "giovanna", "giovana", "gi"]
+	},
+	"AN": {
+		"number": 13,
+		"name-short": "Anji",
+		"name_long":  "Anji Mito",
+		"name-other": ["anji", "anj", "anjimito", "anji_mito", "an"]
+	},
+	"IN": {
+		"number": 14,
+		"name-short": "I-no",
+		"name_long":  "I-no",
+		"name-other": ["ino", "i-no", "in"]
+	},
+	"GO": {
+		"number": 15,
+		"name-short": "Goldlewis",
+		"name_long":  "Goldlewis Dickinson",
+		"name-other": ["goldlewis", "gold", "goldlewisdickinson", "goldlewis_dickinson", "dickinson", "go"]
+	},
+	"JC": {
+		"number": 16,
+		"name-short": "Jack-O",
+		"name_long":  "Jack-O",
+		"name-other": ["jack-o", "jacko", "jack0", "jacco", "jakko", "jack_o", "jc"]
+	},
+	"HA": {
+		"number": 17,
+		"name-short": "Happy Chaos",
+		"name_long":  "Happy Chaos",
+		"name-other": ["happy_chaos", "happychaos", "happy", "chaos", "hc", "h_c", "ha"]
+	},
+	"BA": {
+		"number": 18,
+		"name-short": "Baiken",
+		"name_long":  "Baiken",
+		"name-other": ["baiken", "biaken", "bacon", "baicen", "ba"]
+	},
+	"TE": {
+		"number": 19,
+		"name-short": "Testament",
+		"name_long":  "Testament",
+		"name-other": ["testament", "test", "testa", "ment", "te"]
+	},
+	"BR": {
+		"number": 20,
+		"name-short": "Bridget",
+		"name_long":  "Bridget",
+		"name-other": ["bridget", "bridge", "briget", "birdget", "br"]
+	}
+}
