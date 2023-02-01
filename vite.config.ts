@@ -29,6 +29,5 @@ function entryPoints(...paths) {
   });
   
   const config = Object.fromEntries(entries);
-  console.log(config)
   return config;
 }
