@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import Icon_Arrows from './icons/Icon_Arrows.vue'
-import Icon_Home from './icons/Icon_Home.vue'
-import Icon_Input from './icons/Icon_Input.vue'
-import Icon_Stats from './icons/Icon_Stats.vue'
-import Icon_Rating from './icons/Icon_Rating.vue'
-import Icon_Calculator from './icons/Icon_Calculator.vue'
+import NavItem from './NavItem.vue'
 
 defineProps<{
   pageName: string
@@ -21,36 +17,11 @@ defineProps<{
             <Icon_Arrows/>
             </a>
         </li>
-        <li class="nav-item" :class="{active: pageName == 'Home'}">
-            <a href="index.html" class="nav-link">
-                <Icon_Home/>
-                <span class="link-text">Home</span>
-            </a>
-        </li>
-        <li class="nav-item" :class="{active: pageName == 'Input'}">
-            <a href="input.html" class="nav-link">
-                <Icon_Input/>
-                <span class="link-text">Input</span>
-            </a>
-        </li>
-        <li class="nav-item" :class="{active: pageName == 'Stats'}">
-            <a href="stats.html" class="nav-link">
-                <Icon_Stats/>
-                <span class="link-text">Stats</span>
-            </a>
-        </li>
-        <li class="nav-item" :class="{active: pageName == 'Rating'}">
-            <a href="rating.html" class="nav-link">
-                <Icon_Rating/>
-                <span class="link-text">Rating</span>
-            </a>
-        </li>
-        <li class="nav-item" :class="{active: pageName == 'Calculator'}">
-            <a href="calculator.html" class="nav-link">
-                <Icon_Calculator/>
-                <span class="link-text">Calculator</span>
-            </a>
-        </li>
+        <NavItem navPageName="Home" :currentPage="pageName"/>
+        <NavItem navPageName="Input" :currentPage="pageName" />
+        <NavItem navPageName="Stats" :currentPage="pageName"/>
+        <NavItem navPageName="Rating" :currentPage="pageName" />
+        <NavItem navPageName="Calculator" :currentPage="pageName"/>
     </ul>
   </nav>
 </template>
@@ -104,6 +75,7 @@ nav {
     fill: var(--nav-text-color);
     transition: var(--nav-transition-speed);
 }
+
 .nav-link:hover svg{
     fill: var(--nav-icon-hover-color)
 }
@@ -136,25 +108,6 @@ nav {
 
 nav:hover .nav-logo svg {
     transform: rotate(-180deg);
-}
-
-.nav-item {
-    width: 100%;
-}
-
-.nav-item.active {
-    background: var(--nav-active-bg);
-}
-.nav-item.active svg{
-    fill: var(--nav-icon-active-color)
-}
-
-/* .nav-item:last-child {
-    margin-top: auto;
-} */
-
-.nav-item:hover {
-    background: var(--nav-active-bg);
 }
 
 main {
