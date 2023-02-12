@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     try{
         include('/var/private/ggst/db_connect.php');
-        include('/var/private/ggst-match-log/write_match_log.php');
+        include('/home/ubuntu/ggst-match-log/write_match_log.php');
 
         $sql = "INSERT INTO $match_log_table (date, opponent, character_1, character_2, games, played, won)
                 VALUES ('$date', '$opponent', '$character_1', '$character_2', 
