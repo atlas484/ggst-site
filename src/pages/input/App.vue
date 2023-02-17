@@ -34,7 +34,7 @@ function parseDateToISO(dateString: string) {
   const year = split[2]
   const month = split[0].length > 1 ? split[0] : '0' + split[0]
   const day = split[1].length > 1 ? split[1] : '0' + split[1]
-  return year + "-" + day + "-" + month
+  return year + "-" + month + "-" + day
 }
 function charImgPath(charCode: string) {
   return "./src/assets/characters/faces/" + charCode + ".png"
@@ -133,7 +133,7 @@ getLastSet();
     <h1>Input Sets</h1>
     <p id="last-set">{{ lastSet.lastSetString }}</p>
 
-    <form  id="form" autocomplete="off" @submit.prevent="onSubmit">
+    <form  id="form" autocomplete="off" @submit.prevent="processForm">
       <div id="inputs">
         <div class="character" id="character-1">
           <div class="labeled">
@@ -165,7 +165,7 @@ getLastSet();
       </div>
       <textarea v-model="formData.games" class="formElement games" rows="5" maxlength="255" required="true"
         placeholder="Input games here (up to 255)&#10;1 = 2-0&#10;2 = 2-1&#10;3 = 1-2&#10;4 = 0-2"></textarea>
-      <input type="submit" value="Submit" id="submit-button" @click="processForm()">
+      <input type="submit" value="Submit" id="submit-button" >
     </form>
 
 
