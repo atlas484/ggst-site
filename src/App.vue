@@ -4,9 +4,9 @@ import HomePage from './components/HomePage.vue'
 </script>
 
 <template>
-  <NavBar pageName="Home"/>
+	<NavBar pageName="Home" />
 
-  <HomePage />
+	<HomePage />
 </template>
 
 <style>

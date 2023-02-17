@@ -4,9 +4,9 @@ import HomePage from '../../components/HomePage.vue'
 </script>
 
 <template>
-  <NavBar pageName="Rating"/>
+	<NavBar pageName="Rating" />
 
-  <HomePage />
+	<HomePage />
 </template>
 
 <style>
