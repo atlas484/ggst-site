@@ -1,0 +1,48 @@
+:root {
+	/* font */
+	font-size: 16px;
+	font-family: "Verdana";
+
+	/* colors */
+	--bg-gray-1: #141414;
+	--bg-gray-2: #202020;
+	--bg-gray-3: #272727;
+	--text-white: #cdcdcd;
+	--ggstRed1: #770c00;
+	--ggstRed2: #a01000;
+	--ggstRed3: #f13932;
+}
+:root {
+	--nav-logo-bg: var(--bg-gray-1);
+	--nav-bg: var(--bg-gray-2);
+	--nav-active-bg: var(--bg-gray-3);
+	--nav-text-color: var(--text-white);
+	--nav-icon-active-color: var(--ggstRed1);
+	--nav-icon-hover-color: var(--ggstRed2);
+
+	/* numbers */
+	--nav-transition-speed: 600ms;
+	--nav-width-small: 5rem;
+	--nav-width-large: 16rem;
+	--nav-icon-width: 2rem;
+	--nav-icon-margin-lr: calc(
+		(var(--nav-width-small) - var(--nav-icon-width)) / 2
+	);
+	--nav-logo-margin-left: calc(
+		var(--nav-width-large) - var(--nav-icon-width) - var(--nav-icon-margin-lr)
+	);
+
+	--nav-width: 100vw;
+	--nav-height: var(--nav-width-small);
+	--nav-width-occupation: 0px;
+	--nav-height-occupation: var(--nav-width-small);
+}
+
+@media only screen and (min-width: 700px) {
+	:root {
+		--nav-width: var(--nav-width-small);
+		--nav-height: 100vh;
+		--nav-width-occupation: var(--nav-width-small);
+		--nav-height-occupation: 0;
+	}
+}
