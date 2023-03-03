@@ -1,0 +1,1 @@
+import{d as a,c as n,a as e,F as o,o as t,_ as p,b as m}from"./main-73498727.js";import{H as r}from"./HomePage-f1ddca20.js";const s=a({__name:"App",setup(c){return(_,i)=>(t(),n(o,null,[e(p,{pageName:"Rating"}),e(r)],64))}});m(s).mount("#app");

@@ -1,0 +1,1 @@
+import{d as a,c as t,a as e,F as o,o as n,_ as p,b as s}from"./main-73498727.js";import{H as m}from"./HomePage-f1ddca20.js";const r=a({__name:"App",setup(c){return(_,f)=>(n(),t(o,null,[e(p,{pageName:"Stats"}),e(m)],64))}});s(r).mount("#app");
