@@ -1,1 +1,0 @@
-import{e as o,o as t,c as a,f as e}from"./main-4facdffe.js";const c={},n=e("h1",null,"Page Header",-1),s=e("p",null,"Page paragraph body text",-1),r=[n,s];function _(l,d){return t(),a("main",null,r)}const p=o(c,[["render",_]]);export{p as H};
